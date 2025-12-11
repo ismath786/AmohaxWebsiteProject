@@ -30,7 +30,7 @@ class ContactView(View):
         {message}
         """
 
-        # Send email to your address
+        
         send_mail(
             subject,                # email subject
             full_message,           # composed message with details
@@ -56,7 +56,7 @@ def callback_request(request):
         if form.is_valid():
             obj = form.save()
 
-            # Send email to admin
+          
             try:
                 subject = "New Callback Request"
                 message = (
